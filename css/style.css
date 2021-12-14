@@ -429,3 +429,56 @@ html, body{
   justify-content: center;
   align-items: center;
 }
+
+.message{
+  max-width: 1440px;
+  padding: 14em 12em;
+  margin: 0 auto;
+  margin-bottom: 140px;
+
+  background-image: url('/images/bg-message.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.message-container h1{
+  max-width: 1200px;
+  font-size: 54px;
+  font-weight: 500;
+  text-align: center;
+  
+  color: #FAFAFA;
+}
+
+.message-container p{
+  margin-top: 60px;
+  font-size: 18px;
+  position: relative;
+
+  color: #FAFAFA;
+}
+
+.message-container p:nth-child(2):before{
+  width: 90px;
+  height: 64px;
+  content: "";
+
+  position: absolute;
+  top: -65px;
+  left: -85px;
+
+  background-image: url("/images/icons/quotes.png");
+}
+
+.message-container p:nth-child(3)::after{
+  width: 90px;
+  height: 64px;
+  transform: rotate(180deg);
+  content: ""; 
+
+  position: absolute;
+  right: -65px;
+  bottom: -85px;
+
+  background-image: url("/images/icons/quotes.png");
+}
