@@ -314,17 +314,11 @@ html, body{
   color: var(--secondary-text);
 }
 
-.company-team{
-  margin-bottom: 140px;
+.heading{
+  margin-bottom: 85px;
 }
 
-.team-container{
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.team-heading h1{
+.heading h1{
   margin-bottom: 30px;
   font-size: 54px;
   font-weight: 600;
@@ -333,12 +327,21 @@ html, body{
   color: var(--primary-text);
 }
 
-.team-heading p{
-  margin-bottom: 80px;
+.heading p{
   font-size: 20px;
   text-align: center;
 
   color: var(--secondary-text);
+}
+
+.company-team{
+  margin-bottom: 140px;
+}
+
+.team-container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .team-cards{
@@ -434,7 +437,6 @@ html, body{
   max-width: 1440px;
   padding: 14em 12em;
   margin: 0 auto;
-  margin-bottom: 140px;
 
   background-image: url('/images/bg-message.png');
   background-repeat: no-repeat;
@@ -481,4 +483,123 @@ html, body{
   bottom: -85px;
 
   background-image: url("/images/icons/quotes.png");
+}
+
+.contact{
+  padding: 140px 0px 70px 0px;
+}
+
+.contact-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.contact-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-form form{
+  display: inline-block;
+}
+
+.contact-form form input, textarea{
+  width: 480px;
+  height: 60px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 18px;
+
+  background: #F9F9F9;
+
+  display: block;
+}
+
+.contact-form form textarea{
+  padding: 20px;
+  height: 200px;
+  resize: none;
+}
+
+.contact-form form input::placeholder{
+  color: #6B6B6B;
+}
+
+.contact-info img{
+  width: 60%;
+}
+
+.latest-blogs{
+  padding: 70px 0px;
+}
+
+.blogs-container{
+  width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.blog-cards{
+  display: flex;
+  justify-content: center;
+}
+
+.blog-card{
+  width: 496px;
+  height: 496px;
+  padding: 60px;
+
+  position: relative;
+}
+
+.blog-card.bc-1{
+  margin-right: 60px;
+
+  background-image: url("/images/blog-cover01.png");
+  background-repeat: no-repeat;
+}
+
+.blog-card.bc-2{
+  background-image: url("/images/blog-cover02.png");
+  background-repeat: no-repeat;
+}
+
+.blog-heading{
+  position: absolute;
+  bottom: 60px;
+}
+
+.blog-heading h3{
+  margin-bottom: 20px;
+  font-size: 27px;
+  font-weight: 700;
+  text-align: center;
+
+  color: #FFF;
+}
+
+.blog-heading p{
+  font-size: 16px;
+  text-align: center;
+
+  color: #FFF;
+}
+
+.blog-heading .cta-button{
+  margin: 20px auto 0px;
+  font-weight: 400;
+  border: 1px solid #FFF;
+
+  color: #FFF;
+  background: none;
+  box-shadow: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
