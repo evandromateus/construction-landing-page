@@ -603,3 +603,35 @@ html, body{
   justify-content: center;
   align-items: center;
 }
+
+.newsletter-container{
+  max-width: 1200px;
+  padding: 70px 0px;
+  margin: 0 auto;
+}
+
+.newsletter-container .heading h1{
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.newsletter .cta-button{
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.newsletter .cta-button::after{
+  content: "";
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  right: 40px;
+  top: 28px;
+
+  background-image: url("/images/icons/right-arrow.png");
+  background-repeat: no-repeat;
+}
