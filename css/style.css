@@ -505,7 +505,7 @@ html, body{
   display: inline-block;
 }
 
-.contact-form form input, textarea{
+.contact-form form input, textarea, .footer-info input{
   width: 480px;
   height: 60px;
   padding-left: 20px;
@@ -634,4 +634,80 @@ html, body{
 
   background-image: url("/images/icons/right-arrow.png");
   background-repeat: no-repeat;
+}
+
+.footer-container{
+  max-width: 1200px;
+  padding: 70px 15px;
+  margin: 0 auto;
+}
+
+.footer-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-info .logo, .footer-info h4{
+  margin-bottom: 40px;
+}
+
+.footer-info h4{
+  font-size: 18px;
+  font-weight: 600;
+
+  color: var(--primary-text);
+}
+
+.footer-info p{
+  margin-bottom: 40px;
+  color: var(--secondary-text);
+}
+
+.social-icons{
+  margin-right: 16px;
+}
+
+.footer-info ul li{
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.footer-info ul li a{
+  text-decoration: none;
+  color: var(--secondary-text);
+}
+
+.footer-info input{
+  width: 174px;
+  height: 40px;
+  font-size: 10px;
+
+  color: var(--primary-text);
+}
+
+.footer-info .form-control{
+  position: relative;
+}
+
+.form-control img{
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+
+.footer hr{
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #F4F4F4;
+}
+
+.copy{
+  padding: 40px 0;
+}
+
+.copy p{
+  font-size: 14px;
+  text-align: center;
+
+  color: #C2C2C2;
 }
