@@ -123,7 +123,7 @@ html, body{
   display: flex;
 }
 
-.hero-cta button, .cta-button{
+.cta{
   width: 214px;
   height: 64px;
   border: none;
@@ -131,6 +131,7 @@ html, body{
   font-family: inherit;
   font-size: 17px;
   font-weight: 500;
+  cursor: pointer;
 
   color: #FFF;
   background: var(--main-color);
@@ -142,7 +143,7 @@ html, body{
   0px 1.85185px 3.14815px rgba(24, 167, 185, 0.0240741);
 }
 
-.hero-cta button:first-child::before{
+.hero-cta .cta:first-child::before{
   content: '';
   padding: 20em;
   position: absolute;
@@ -154,7 +155,7 @@ html, body{
   background-repeat: no-repeat;
 }
 
-.hero-cta button:last-child{
+.hero-cta .cta:last-child{
   margin-left: 20px;
   border: 1px solid var(--main-color);
 
@@ -415,18 +416,22 @@ html, body{
   align-items: center;
 }
 
-.team-nav .button:last-child{
-  background: var(--main-color);
-}
-
-.team-nav .button{
+.nav-button{
   width: 50px;
   height: 50px;
+  border: none;
   border-radius: 50%;
+  cursor: pointer;
+
+  background: none;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nav-button:last-child{
+  background: var(--main-color);
 }
 
 .message{
@@ -494,35 +499,60 @@ html, body{
   display: inline-block;
 }
 
-.contact-form form input, textarea, .footer-info input{
+.form-control{
+  position: relative;
+}
+
+.form-input{
   width: 480px;
   height: 60px;
   padding-left: 20px;
   margin-bottom: 20px;
-  border: none;
+  border: 1px solid #F9F9F9;
   border-radius: 7px;
   outline: none;
   font-family: inherit;
   font-size: 18px;
-
+  
   background: #F9F9F9;
-
+  
   display: block;
 }
 
-.contact-form form textarea{
+.form-input:focus{
+  border: 1px solid #F4F4F4;
+  background: none;
+}
+
+.form-control label{
+  padding: 0px 5px;
+  cursor: text;
+
+  position: absolute;
+  left: 20px;
+  top: 20px;
+
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in, background ease-in;
+  color: var(--secondary-text);
+  background: #F9F9F9;
+}
+
+.form-input:focus ~ label,
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ label{
+  top: -5px;
+  left: 10px;
+  font-size: 10px;
+  background: #FFF;
+}
+
+.form-input:not(:placeholder-shown){
+  background: #FFF;
+}
+
+.form-control textarea{
   padding: 20px;
   height: 200px;
   resize: none;
-}
-
-.contact-form form input::placeholder, textarea{
-  color: #6B6B6B;
-}
-
-.contact-form form input:focus{
-  border: 1px solid #F4F4F4;
-  background: none;
 }
 
 .contact-info img{
@@ -576,7 +606,7 @@ html, body{
   color: #FFF;
 }
 
-.blog-heading .cta-button{
+.blog-heading .cta{
   margin: 20px auto 0px;
   font-weight: 400;
   border: 1px solid #FFF;
@@ -596,7 +626,7 @@ html, body{
   line-height: 1.2;
 }
 
-.newsletter .cta-button{
+.newsletter .cta{
   margin: 0 auto;
   padding: 0 40px;
   position: relative;
@@ -605,7 +635,7 @@ html, body{
   align-items: center;
 }
 
-.newsletter .cta-button::after{
+.newsletter .cta::after{
   content: "";
   width: 20px;
   height: 10px;
@@ -662,10 +692,6 @@ html, body{
   font-size: 10px;
 
   color: var(--primary-text);
-}
-
-.footer-info .form-control{
-  position: relative;
 }
 
 .form-control img{
